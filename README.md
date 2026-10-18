@@ -39,3 +39,5 @@ This repository is intended for learning and experimentation only.
 ## Author
 
 GitHub Ruleset Learner
+
+Testing direct push protection
