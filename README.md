@@ -1,41 +1,78 @@
-# Ruleset Practice Repository
+# GitHub Rulesets Practice
 
-Welcome to my GitHub Ruleset Practice Repository!
+A beginner-friendly repository to learn and test GitHub Rulesets, branch protection, and pull request workflows.
 
-This repository is created to learn and experiment with GitHub Rulesets, branch protection, and pull request workflows.
-
-## Objectives
+## Goals
 
 - Understand how GitHub Rulesets work.
-- Protect the `main` branch.
-- Practice creating feature branches.
-- Learn how to create and merge pull requests.
-- Test restrictions on direct pushes and force pushes.
+- Protect the `main` branch from direct changes.
+- Practice feature branches and pull requests.
+- Prevent force pushes and accidental branch deletion.
+- Learn how to enforce code quality checks before merging.
+
+## Branch Strategy
+
+| Branch | Purpose |
+|---|---|
+| `main` | Contains approved changes |
+| `feature/update-readme` | Practice README updates |
+| `feature/test-ruleset` | Test GitHub Ruleset restrictions |
+
+## Ruleset Configuration
+
+The following rules will be tested on the `main` branch:
+
+- Require a pull request before merging.
+- Block force pushes.
+- Restrict branch deletion.
+- Explore required approvals.
+- Explore required status checks.
+
+**Note:** These rules must be configured in GitHub repository settings. Listing them here does not automatically enable them.
 
 ## Practice Tasks
 
-- [ ] Create a feature branch.
-- [ ] Update this README file.
-- [ ] Commit and push changes.
-- [ ] Open a pull request.
-- [ ] Test the rules applied to the `main` branch.
+- [ ] Add and commit this README.
+- [ ] Create a branch named `feature/update-readme`.
+- [ ] Make a change to this file.
+- [ ] Push the feature branch to GitHub.
+- [ ] Open a pull request into `main`.
+- [ ] Test whether direct pushes to `main` are blocked.
+- [ ] Test whether force pushes are blocked.
+- [ ] Explore required status checks.
 
-## Example Branches
+## Basic Git Commands
 
-- `main` — Main branch containing approved changes.
-- `feature/update-readme` — Branch for practicing README changes.
-- `feature/test-ruleset` — Branch for testing repository rules.
+Check repository status:
 
-## Technologies
+```bash
+git status
+```
 
-- Git
-- GitHub
-- Markdown
+Create a feature branch:
 
-## Disclaimer
+```bash
+git switch -c feature/update-readme
+```
 
-This repository is intended for learning and experimentation only.
+Stage and commit changes:
 
-## Author
+```bash
+git add README.md
+git commit -m "Update README"
+```
 
-GitHub Ruleset Learner
+Push the branch:
+
+```bash
+git push -u origin feature/update-readme
+```
+
+## Learning Resources
+
+- [GitHub Rulesets Documentation](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets)
+- [GitHub Pull Request Documentation](https://docs.github.com/en/pull-requests)
+
+## Purpose
+
+This repository is for learning, experimentation, and understanding how repository rules help protect code and maintain a safer development workflow.
